@@ -17,6 +17,10 @@
       {
         "src": "/(.+)",
         "dest": "build/$1"
+      },
+      {
+        "src": "/api/contact",
+        "dest": "build/index.js"
       }
     ]
   }
