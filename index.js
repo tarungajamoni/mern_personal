@@ -39,6 +39,10 @@ app.post("/api/contact", async (req, res) => {
   });
 });
 
-app.listen(/, () => {
-  console.log("Server listening");
-});
+app.get('/server',(req, res)=>{
+  res.json({status:'success'})
+})
+
+//app.listen(/, () => {
+  //console.log("Server listening");
+//});
