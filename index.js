@@ -43,6 +43,6 @@ app.get('/server',(req, res)=>{
   res.json({status:'success'})
 })
 
-//app.listen(/, () => {
-  //console.log("Server listening");
-//});
+app.listen( () => {
+  console.log("Server listening");
+});
