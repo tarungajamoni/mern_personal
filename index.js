@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static(path.resolve(__dirname,'build')))
 
-app.post("/api/contact", async (req, res) => {
+app.get("/api/contact", async (req, res) => {
     console.log("req.body", req.body)
   const { name, email, message } = req.body;
   const password = process.env.EMAIL_PASSWORD;
@@ -40,6 +40,7 @@ app.post("/api/contact", async (req, res) => {
 });
 
 app.get('/server',(req, res)=>{
+  console.log("inside server1111111)
   res.json({status:'success'})
 })
 
