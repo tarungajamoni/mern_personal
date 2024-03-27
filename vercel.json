@@ -19,7 +19,7 @@
         "dest": "build/$1"
       },
       {
-        "src": "/api/contact",
+        "src": "/server",
         "dest": "build/index.js"
       }
     ]
