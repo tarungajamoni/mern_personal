@@ -141,7 +141,7 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static(path.resolve(__dirname,'build')));
 
-app.post("/api", async (req, res) => {
+app.get("/api", async (req, res) => {
     console.log("req.body", req.body)
   const { name, email, message } = req.body;
   const password = process.env.EMAIL_PASSWORD;
@@ -171,7 +171,7 @@ app.post("/api", async (req, res) => {
         }
     });
 });
-module.exports = app;
-// app.listen(3000, () => {
-//   console.log("Server listening on port 3000");
-// });
+// module.exports = app;
+app.listen(3000, () => {
+  console.log("Server listening on port 3000");
+});
