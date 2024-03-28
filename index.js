@@ -176,6 +176,6 @@ app.get('/api',(req, res)=>{
   res.json({status:'success'})
 })
 
-app.listen(3000, () => {
+app.listen('/', () => {
   console.log("Server listening on port 3000");
 });
