@@ -15,6 +15,10 @@
         "dest": "build/index.html"
       },
       {
+        "src": "/api",
+        "dest": "index.js"
+      },
+      {
         "src": "/(.+)",
         "dest": "build/$1"
       }
