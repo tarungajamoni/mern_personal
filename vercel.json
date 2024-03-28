@@ -22,5 +22,10 @@
         "src": "/api/contact",
         "dest": "build/index.js"
       }
-    ]
+    ],
+    
+      "redirects": [
+        { "source": "/server", "destination": "/api/contact", "statusCode": 301 }
+      ]
+    
   }
