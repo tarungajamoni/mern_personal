@@ -172,7 +172,7 @@ app.post("/api", async (req, res) => {
     });
 });
 //  module.exports = app;
-server.get('/',(req, res)=>{
+app.get('/api',(req, res)=>{
   res.json({status:'success'})
 })
 
