@@ -20,7 +20,7 @@
       },
       {
         "src": "/server",
-        "dest": "build/index.js"
+        "dest": "index.js"
       }
     ]
   }
