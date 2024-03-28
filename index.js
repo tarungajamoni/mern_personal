@@ -172,6 +172,6 @@ app.post("/api", async (req, res) => {
     });
 });
 //  module.exports = app;
-app.listen('/api', () => {
+app.listen('/', () => {
   console.log("Server listening on port 3000");
 });
