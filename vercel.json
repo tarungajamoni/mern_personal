@@ -19,13 +19,8 @@
         "dest": "build/$1"
       },
       {
-        "src": "/api/contact",
+        "src": "/server",
         "dest": "build/index.js"
       }
-    ],
-    
-      "redirects": [
-        { "source": "/server", "destination": "/api/contact", "statusCode": 301 }
-      ]
-    
+    ]
   }

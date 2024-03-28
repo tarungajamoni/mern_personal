@@ -142,23 +142,24 @@ app.use(cors());
 app.use(express.static(path.resolve(__dirname,'build')));
 
 app.post("/api/contact", async (req, res) => {
-    const { name, email, message } = req.body;
-    const password = process.env.EMAIL_PASSWORD;
-    const transporter = nm.createTransport({
-        host: "smtp.gmail.com",
-        port: 587,
-        secure: false,
-        auth: {
-            user: "test.personal0123@gmail.com",
-            pass: password,
-        },
-    });
-    const options = {
-        from: email,
-        to: "test.personal0123@gmail.com",
-        subject: "Test Subject",
-        text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
-    };
+    console.log("req.body", req.body)
+  const { name, email, message } = req.body;
+  const password = process.env.EMAIL_PASSWORD;
+  const transporter = nm.createTransport({
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false,
+    auth: {
+      user: "test.personal0123@gmail.com",
+      pass: password,
+    },
+  });
+  const options = {
+    from: email,
+    to: "test.personal0123@gmail.com",
+    subject: "test subject",
+    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+  };
 
     transporter.sendMail(options, function (error, info) {
         if (error) {
@@ -171,7 +172,6 @@ app.post("/api/contact", async (req, res) => {
     });
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+app.listen(3000, () => {
+  console.log("Server listening on port 3000");
 });
